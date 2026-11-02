@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resif Rehberi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="ust">
+    <div class="kap">
+      <h1>Resif Rehberi</h1>
+      <p>Deniz akvaryumu canlıları için bakım ve uyumluluk rehberi</p>
+    </div>
+  </header>
+
+  <main class="kap">
+    <section class="araclar" aria-label="Arama ve filtreler">
+      <input id="arama" type="search" placeholder="Canlı ara (Türkçe veya Latince ad)…" autocomplete="off">
+
+      <div class="kategoriler" role="group" aria-label="Kategori">
+        <button class="kat aktif" data-kategori="">Tümü</button>
+        <button class="kat" data-kategori="Balık">Balıklar</button>
+        <button class="kat" data-kategori="Mercan">Mercanlar</button>
+        <button class="kat" data-kategori="Omurgasız">Omurgasızlar</button>
+      </div>
+
+      <div class="secimler">
+        <label>Bakım zorluğu
+          <select id="zorluk">
+            <option value="">Tümü</option>
+            <option>Kolay</option>
+            <option>Orta</option>
+            <option>Zor</option>
+          </select>
+        </label>
+        <label>Resif uyumu
+          <select id="resif">
+            <option value="">Tümü</option>
+            <option>Evet</option>
+            <option>Dikkatli</option>
+            <option>Hayır</option>
+          </select>
+        </label>
+        <span id="sayac" class="sayac" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section id="izgara" class="izgara" aria-label="Canlılar"></section>
+    <p id="bos" class="bos" hidden>Aramanıza uygun canlı bulunamadı.</p>
+  </main>
+
+  <footer class="alt">
+    <div class="kap">
+      <nav class="yasal" aria-label="Yasal">
+        <button data-yasal="kvkk">KVKK Aydınlatma Metni</button>
+        <button data-yasal="gizlilik">Gizlilik Politikası</button>
+        <button data-yasal="cerez">Çerez Politikası</button>
+        <button data-yasal="kullanim">Kullanım Koşulları</button>
+      </nav>
+      <p>İletişim: <a id="eposta" href="#"></a></p>
+      <p class="kucuk">Fotoğraflar Wikimedia Commons'tan, ilgili lisanslarıyla kullanılmıştır.</p>
+      <p class="kucuk">© 2026 Resif Rehberi. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <dialog id="pencere">
+    <button class="kapat" aria-label="Kapat">×</button>
+    <div id="pencere-icerik"></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="legal.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
